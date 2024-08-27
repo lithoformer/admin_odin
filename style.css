@@ -190,6 +190,7 @@ button:hover{
     grid-template-rows: repeat(10,1fr);
     background-color: lightsteelblue;
     box-shadow: 0px 5px 5px 0px inset #79858E;
+    border: 5px solid red;
 }
 
 div.projects{
@@ -198,75 +199,69 @@ div.projects{
     grid-column:1/8;
     gap:2rem;
     padding: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(10,1fr);
 }
 
-div.announcements{
+div.subright{
     display:grid;
-    grid-row:1/6;
-    grid-column:8/13;
-    gap:2rem;
-    padding: 20px;
-}
-
-div.trending{
-    display:grid;
-    grid-row:6/11;
-    grid-column:8/13;
-    padding: 20px;
-    gap:2rem;
+    grid-row:1/11;
+    grid-column:8/11;
+    grid-template-rows: repeat(10,1fr);
+    grid-template-columns: repeat(10,1fr);
 }
 
 span.projects,span.announcements,span.trending{
+    grid-row: 1/2;
     font-size:2rem;
 }
 
 .projects div{
     background-color: white;
     border-left:10px solid orange;
-    width:625px;
-    height:275px;
     border-radius: 1rem;
     box-shadow: 0px 5px 5px 0px #79858E;
 }
 
 .projectcard{
     display:grid;
-    grid-template-rows: 1fr 4fr 2fr;
+    overflow: scroll;
+    grid-template-rows: 1fr 3fr 1fr;
     grid-template-columns: repeat(6,1fr);
 }
 
 .project1{
-    grid-row: 2 / 3;
+    grid-row: 2 / 5;
     grid-column: 1 / 2;
 }
 
 .project2{
     display:grid;
-    grid-row: 3 / 4;
+    grid-row: 5 / 8;
     grid-column: 1 / 2;
 }
 
 .project3{
     display:grid;
-    grid-row: 4 / 5;
+    grid-row: 8 / 11;
     grid-column: 1 / 2;
 }
 
 .project4{
     display:grid;
-    grid-row: 2 / 3;
+    grid-row: 2 / 5;
     grid-column: 2 / 3;
 }
 
 .project5{
     display:grid;
-    grid-row: 3 / 4;
+    grid-row: 5 / 8;
     grid-column: 2 / 3;
 }
 
 .project6{
     display:grid;
-    grid-row: 4 / 5;
+    grid-row: 8 / 11;
     grid-column: 2 / 3;
 }
 
@@ -286,71 +281,89 @@ span.projects,span.announcements,span.trending{
     grid-column: 1/8;
 }
 
-.announcecard{
-    display:grid;
-    height:400px;
-    width:500px;
-    padding:20px;
-    grid-template-rows: 1fr 1fr 1fr;
-    background-color: white;
-    border-radius: 2rem;
-    box-shadow: 0px 5px 5px 0px #79858E;
-}
-
 .starlink{
     display:grid;
     grid-row: 3/4;
     grid-column:4/5;
-    width:50%;
-    height:50%;
+    width:40%;
+    height:40%;
 }
 
 .eyelink{
     display:grid;
     grid-row: 3/4;
     grid-column:5/6;
-    width:50%;
-    height:50%;
+    width:40%;
+    height:40%;
 }
 
 .forklink{
     display:grid;
     grid-row: 3/4;
     grid-column:6/7;
-    width:50%;
-    height:50%;
+    width:40%;
+    height:40%;
 }
 
-.announcecard div{
-    overflow:auto;
-    text-overflow:clip;
+div.announcements{
+    display:grid;
+    grid-row:1/6;
+    grid-template-rows: 1fr 5fr;
+    grid-column:1/11;
+    gap:2rem;
+    padding: 20px;
+}
+
+.announcecard{
+    display:grid;
+    grid-row:2/3;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-height: 100%;
+    overflow: scroll;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0px 5px 5px 0px #79858E;
+    align-items: center;
+}
+
+.announceh{
+    font-size: 1.5rem;
     padding:20px;
-    font-size: 1.25rem;
-    color:rgb(104, 104, 104);
 }
 
-.announcetext1{
-    grid-row: 1/2;
+.announcecard p{
+    font-size:1rem;
+    padding:20px;
 }
 
-.announcetext2{
-    grid-row: 2/3;
+.announcecard1{
+    display:grid;
+    grid-row:1/2;
 }
 
-.announcetext3{
-    grid-row: 3/4;
+.announcecard2{
+    display:grid;
+    grid-row:2/3;
 }
 
-.aheader{
-    color:black;
-    font-weight: bold;
+.announcecard3{
+    display:grid;
+    grid-row:3/4;
+}
+
+div.trending{
+    display:grid;
+    grid-row:6/11;
+    grid-column:1/11;
+    padding: 20px;
+    gap:2rem;
+    grid-template-rows: 1fr 5fr;
 }
 
 .trendingcard{
     display:grid;
-    height:400px;
-    width:500px;
-    padding:20px;
+    grid-row:2/3;
+    padding: 20px;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 3fr;
     background-color: white;
