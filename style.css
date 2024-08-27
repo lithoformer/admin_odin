@@ -393,7 +393,7 @@ span.projects,span.announcements,span.trending{
     margin-left: 75px;
 }
 
-:visited{
+:visited,:link{
     color:white;
 }
 
